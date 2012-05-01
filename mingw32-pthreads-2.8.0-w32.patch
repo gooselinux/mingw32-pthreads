@@ -1,0 +1,11 @@
+--- ./sched.h	2009-05-18 15:15:33.893366500 -0700
++++ ./sched.h	2009-01-29 19:17:29.010338200 -0800
+@@ -119,6 +119,8 @@
+ #  include <sys/types.h>
+ /* Required by Unix 98 */
+ #  include <time.h>
++#else
++typedef int pid_t;
+ #endif /* PTW32_LEVEL >= PTW32_LEVEL_MAX */
+ #else
+ typedef int pid_t;

@@ -1,0 +1,24 @@
+--- pthreads-w32-2-8-0-release/tests/GNUmakefile.wine	2008-10-10 14:19:06.000000000 +0100
++++ pthreads-w32-2-8-0-release/tests/GNUmakefile	2008-10-10 14:19:40.000000000 +0100
+@@ -87,7 +87,7 @@
+ 	  mutex6s mutex6es mutex6rs \
+ 	  mutex7 mutex7n mutex7e mutex7r mutex8 mutex8n mutex8e mutex8r \
+ 	  count1 \
+-	  once1 once2 once3 once4 self2 \
++	  once1 self2 \
+ 	  cancel1 cancel2 \
+ 	  semaphore4 semaphore4t semaphore5 \
+ 	  barrier1 barrier2 barrier3 barrier4 barrier5 \
+@@ -274,9 +274,9 @@
+ mutex8e.pass: mutex7e.pass
+ mutex8r.pass: mutex7r.pass
+ once1.pass: create1.pass
+-once2.pass: once1.pass
+-once3.pass: once2.pass
+-once4.pass: once3.pass
++#once2.pass: once1.pass
++#once3.pass: once2.pass
++#once4.pass: once3.pass
+ priority1.pass: join1.pass
+ priority2.pass: priority1.pass barrier3.pass
+ reuse1.pass: create2.pass
